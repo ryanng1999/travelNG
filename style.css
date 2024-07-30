@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+.padding {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+html {
+  margin: 0;
+  background-color: #e6eeff;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+ol {
+  padding-left: 26px;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+/* introduction picture */
+.train {
+  max-width: 100%;
+  position: relative;
+  margin: 10px 0 0 0;
+}
+
+/* bio picture */
+.circle {
+  border-radius: 50%;
+  max-width: 20%;
+}
+
+@media (max-width: 768px) {
+  .circle {
+    border-radius: 50%;
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  .circle {
+    border-radius: 50%;
+    max-width: 30%;
+  }
+}
+
+/* news picture */
+.news {
+  max-width: 75%;
+  position: relative;
+  margin: 10px 0 0 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* YouTube video */
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 75%;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Subway Symbol */
+.subwaySymbol {
+  font-size: 16px;
+}
+
+/* Navigation bar */
+.NavBar {
+  overflow: hidden;
+}
+
+.NavBar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.NavBar .active {
+  color: white;
+}
+
+.active {
+  background-color: #0047cc;
+  color: white;
+}
+
+.NavBar .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropdownButton {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ccdeff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.NavBar a:hover, .dropdown:hover .dropdownButton {
+  background-color: #0047cc;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #0047cc;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .NavBar a:not(:first-child), .dropdown .dropdownButton {
+    display: none;
+  }
+  .NavBar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .NavBar.responsive {position: relative;}
+  .NavBar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .NavBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .NavBar.responsive .dropdown {float: none;}
+  .NavBar.responsive .dropdown-content {position: relative;}
+  .NavBar.responsive .dropdown .dropdownButton {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* footer */
+footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  color: black;
+  text-align: left;
+}
